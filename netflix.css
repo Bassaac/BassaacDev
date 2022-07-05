@@ -1,0 +1,235 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'montserrat';
+    box-sizing: border-box;
+}
+
+header {
+    display: flex;
+    position: absolute;
+    top: 0;
+    left: 0;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 30px 100px;
+    z-index: 100;
+}
+
+header .logo1 img {
+    max-width: 150px;
+}
+
+.nav {
+    display: flex;
+}
+
+.nav a {
+    text-decoration: none;
+    color: white;
+    display: flex;
+    margin: 0 10px;
+    list-style: none;
+}
+
+.nav li {
+    list-style: none;
+    padding: 10px;
+    word-spacing: 2px;
+    margin: 0 10px;
+    display: flex;
+}
+
+.nav li:hover a {
+    color: red;
+}
+
+.search {
+    position: relative;
+    width: 300px;
+    height: 40px;
+}
+
+.search input {
+    position: absolute;
+    background: transparent;
+    width: 100%;
+    height: 100%;
+    color: white;
+    border: 1px solid white;
+    outline: none;
+    border-radius: 2px;
+    padding-left: 40px;
+    backdrop-filter: blur(10px);
+}
+
+.search input::placeholder {
+    border-left: 1px solid white;
+    color: white;
+    padding-left: 10px;
+}
+
+body {
+    background: black;
+}
+
+.search .fa-search {
+    color: rgb(255, 255, 255);
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+}
+
+.banner {
+    display: flex;
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    min-height: 100vh;
+    padding: 0 100px;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.banner .bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.content {
+    position: relative;
+    max-width: 550px;
+    z-index: 1;
+}
+
+.content .logo01 {
+    position: relative;
+    max-width: 259px;
+}
+
+.banner .content h4 {
+    color: white;
+    padding: 10px 0 10px 0px;
+}
+
+.banner .content h4 span {
+    padding: 0px 8px 0px 8px;
+    border-right: 1px solid white;
+}
+
+.banner .content h4 span:nth-child(1) {
+    padding-left: 0;
+}
+
+.banner .content h4 span i {
+    background-color: red;
+    padding: 1px 8px;
+    border-radius: 2px;
+    display: inline;
+    color: white;
+    font-style: normal;
+}
+
+.banner .content h4 span:nth-child(4) {
+    border-right: none;
+}
+
+.banner .content p {
+    color: white;
+    line-height: 1.5em;
+    font-weight: lighter;
+    font-family: inherit;
+    margin: 10px 0 20px;
+}
+
+.banner .content .button {
+    position: absolute;
+}
+
+.banner .content .button a {
+    text-decoration: none;
+    color: white;
+    border-radius: 3px;
+    background-color: transparent;
+    margin-right: 6px;
+    padding: 8px 10px;
+    position: relative;
+    display: inline-block;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.banner .content .button a:nth-child(2) {
+    background-color: red;
+}
+
+.banner .content .button:hover a:nth-child(1) {
+    background-color: rgb(252, 0, 0);
+}
+
+.play {
+    position: absolute;
+    bottom: 50px;
+    left: 100px;
+    color: white;
+    display: inline-flex;
+    justify-content: flex-start;
+    align-items: center;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 500;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.play img {
+    filter: invert(100%);
+    width: 30px;
+    margin-right: 10px;
+}
+
+.trailer {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 100000;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(8px);
+    visibility: hidden;
+    opacity: 0;
+}
+
+.trailer video {
+    max-width: 900px;
+    outline: none;
+}
+
+.trailer.active {
+    visibility: visible;
+    opacity: inherit;
+}
+
+.trailer .fa-times {
+    color: rgb(255, 255, 255);
+    font-size: 50px;
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    cursor: pointer;
+    z-index: 1000000;
+}
+
+.trailer .fa-times:hover {
+    color: rgb(139, 132, 132);
+}

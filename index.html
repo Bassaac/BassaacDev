@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="netflix.css">
+    <link rel="preconnect" href="https://fons.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;1,100;1,400&display=swap" rel="stylesheet">
+
+    <link href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.css" rel="stylesheet" type='text/css'>
+    <title>Document</title>
+</head>
+
+<body>
+    <header>
+        <a href="#" class="logo1"><img src="images/Netflix-logo.png"></a>
+        <ul class="nav">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">TV Shows</a></li>
+            <li><a href="#">Movies</a></li>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">My List</a></li>
+        </ul>
+        <div class="search"> <input type="text" placeholder="Search"><i class="fa fa-search"></i> </div>
+        </div>
+
+    </header>
+    <div class="banner">
+        <img src="images/Mulan-bg.jpg" alt="background" class="bg">
+        <div class="content"><img class="logo01" src="images/MulanText1.png">
+            <h4>
+                <span>2020</span>
+                <span><i>12+</i></span>
+                <span>1hr 55mins</span>
+                <span>Action</span>
+            </h4>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Et iusto totam perspiciatis quidem omnis saepe reiciendis voluptate iste sunt quia, laboriosam deserunt facere dicta nam natus distinctio inventore aliquid! Dicta?</p>
+            <div class="button">
+                <a href="#"><i class="fa fa-play"></i>Play</a>
+                <a href="#"><i class="fa fa-plus"></i>My list</a>
+
+            </div>
+        </div>
+        <div class="play" onclick="toggle()"><img src="images/PLAY.png"> Watch Trailer</div>
+    </div>
+    <div class="trailer"><video src="videos/My Video999.mkv" controls="true" autoplay="true"></video><i class="fa fa-times" onclick="toggle()"></i> </div>
+
+    <script>
+        function toggle() {
+            const trailer = document.querySelector('.trailer')
+            trailer.classList.toggle('active')
+        }
+    </script>
+</body>
+
+</html>
